@@ -16,6 +16,16 @@ body {
 * {
   box-sizing: border-box;
 }
+/*Font/Fuente*/
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header h1,
+nav-logo,
+h2 {
+  font-family: 'Playfair Display', serif;
+}
 
 /* ==========================================================================
    HEADER (Encabezado principal)
@@ -372,6 +382,79 @@ section,
   0% { opacity: 1; }
   50% { opacity: 0.8; }
   100% { opacity: 1; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*Preloader*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease-out;
+}
+
+.preloader::after {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border: 4px solid #25D366;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 15px;
+}
+
+.loader-logo {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loaded .preloader {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: #128C7E;
 }
 
 /* ==========================================================================
@@ -810,4 +893,86 @@ section,
 .loaded .loader {
   opacity: 0;
   pointer-events: none;
+}
+/* === MICRO-ANIMACIONES EN HOVER === */
+
+/* Botones WhatsApp con efecto de brillo */
+.whatsapp {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.whatsapp:hover::before {
+  left: 100%;
+}
+
+.whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Items del catálogo con efecto sutil */
+.item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow: 
+    0 15px 25px rgba(0, 0, 0, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* === ANIMACIÓN DE ENTRADA EN HEADER === */
+
+header h1 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+header p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === FAVICON EN EL MENÚ DE NAVEGACIÓN === */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre ícono y texto */
+  font-size: 1.3em;
+}
+
+.nav-favicon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px; /* Opcional: bordes redondeados */
+  border: 1px solid #444;
+  padding: 2px;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo:hover .nav-favicon {
+  transform: scale(1.1);
 }

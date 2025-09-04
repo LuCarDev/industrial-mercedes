@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <!-- Metadatos básicos -->
   <meta charset="UTF-8" />
@@ -7,32 +8,47 @@
   <title>Industrial Mercedes - Muebles de Diseño</title>
   <link rel="stylesheet" href="styles.css" />
 
+  <!--Font/Fuente-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500&display=swap"
+    rel="stylesheet">
+
   <!-- === SEO BÁSICO === -->
-<meta name="description" content="Industrial Mercedes diseña y fabrica muebles industriales artesanales en Mercedes, Buenos Aires. Mesas, estanterías y más, hechos a medida con hierro y madera maciza.">
-<meta name="keywords" content="muebles industriales, mesa de comedor hierro, estantería modular, diseño argentino, muebles a medida, Mercedes Buenos Aires, muebles de metal y madera">
-<meta name="author" content="Industrial Mercedes">
-<meta name="robots" content="index, follow">
+  <meta name="description"
+    content="Industrial Mercedes diseña y fabrica muebles industriales artesanales en Mercedes, Buenos Aires. Mesas, estanterías y más, hechos a medida con hierro y madera maciza.">
+  <meta name="keywords"
+    content="muebles industriales, mesa de comedor hierro, estantería modular, diseño argentino, muebles a medida, Mercedes Buenos Aires, muebles de metal y madera">
+  <meta name="author" content="Industrial Mercedes">
+  <meta name="robots" content="index, follow">
 
-<!-- Open Graph (para redes sociales) -->
-<meta property="og:title" content="Industrial Mercedes - Muebles de Diseño en Buenos Aires">
-<meta property="og:description" content="Muebles industriales hechos a mano en hierro y madera maciza. Diseño único y funcional desde Mercedes, Argentina.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tudominio.com.ar"> <!-- Cambia por tu URL real -->
-<meta property="og:image" content="/img/destacado.jpg"> <!-- Imagen representativa (ej: una mesa bien iluminada) -->
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:title" content="Industrial Mercedes - Muebles de Diseño en Buenos Aires">
+  <meta property="og:description"
+    content="Muebles industriales hechos a mano en hierro y madera maciza. Diseño único y funcional desde Mercedes, Argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://industrial-mercedes.netlify.app"> <!-- Cambia por tu URL real -->
+  <meta property="og:image" content="/img/destacado.jpg"> <!-- Imagen representativa (ej: una mesa bien iluminada) -->
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Industrial Mercedes - Muebles de Diseño">
-<meta name="twitter:description" content="Muebles industriales artesanales hechos a medida en Argentina.">
-<meta name="twitter:image" content="/img/destacado.jpg">
+  <!-- Twitter-X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Industrial Mercedes - Muebles de Diseño">
+  <meta name="twitter:description" content="Muebles industriales artesanales hechos a medida en Argentina.">
+  <meta name="twitter:image" content="/img/destacado.jpg">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
 </head>
+
 <body>
   <!-- ==========================================================================
        MENÚ DE NAVEGACIÓN FIJO (NAVBAR)
        ========================================================================== -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#inicio" class="nav-logo" id="nav-logo">Industrial Mercedes</a>
+      <a href="#inicio" class="nav-logo" id="nav-logo">
+        <img src="/favicon.ico" alt="IM" class="nav-favicon">
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -52,23 +68,26 @@
           <a href="#contacto" class="nav-link">Contacto</a>
         </li>
         <li class="nav-item">
-  <a href="https://instagram.com/tuinstagram" target="_blank" class="nav-link social-link" aria-label="Instagram">
-    <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20">
-      <path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.584.07-4.849.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-    </svg>
-  </a>
-</li>
-<li class="nav-item">
-  <a href="https://facebook.com/tufacebook" target="_blank" class="nav-link social-link" aria-label="Facebook">
-    <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20">
-      <path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.983h-1.562c-1.526 0-2.003.953-2.003 1.922v2.26h3.398l-.538 3.47h-2.86v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-  </a>
-</li>
+          <a href="https://instagram.com/tuinstagram" target="_blank" class="nav-link social-link"
+            aria-label="Instagram">
+            <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor"
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.584.07-4.849.148-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="https://facebook.com/tufacebook" target="_blank" class="nav-link social-link" aria-label="Facebook">
+            <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path fill="currentColor"
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.983h-1.562c-1.526 0-2.003.953-2.003 1.922v2.26h3.398l-.538 3.47h-2.86v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
-
+  <button id="backToTop" class="back-to-top">↑</button>
   <!-- ==========================================================================
        ENCABEZADO PRINCIPAL (HEADER)
        ========================================================================== -->
@@ -83,22 +102,27 @@
   <section class="about" id="nosotros">
     <div class="about-container">
       <div class="about-image">
-        <img src="/img/aboutimg.jpg" alt="Taller de Industrial Mercedes - Fabricación de muebles industriales">
+        <img src="/img/sobre-nosotros.webp" alt="Taller de Industrial Mercedes - Fabricación de muebles industriales">
       </div>
       <div class="about-text">
         <h2>
           <span class="icon-wrapper">
             <svg class="icon-bolt" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L14 8h6l-5 5 2 7-7-5-7 5 2-7-5-5h6l2-6z" fill="#c0c0c0"/>
+              <path d="M12 2L14 8h6l-5 5 2 7-7-5-7 5 2-7-5-5h6l2-6z" fill="#c0c0c0" />
             </svg>
           </span>
           Sobre Nosotros
         </h2>
         <span class="badge">Diseño Industrial Argentino</span>
-        <p><strong>Industrial Mercedes</strong> nació de la pasión por el diseño funcional y la artesanía en metal y madera.</p>
-        <p>En nuestro taller en <strong>Mercedes, Buenos Aires</strong>, combinamos técnicas tradicionales con un estilo industrial robusto, creando muebles únicos, duraderos y hechos a medida.</p>
-        <p>Cada pieza es diseñada y fabricada con atención al detalle, utilizando materiales de primera calidad como <strong>madera maciza, hierro negro y acero soldado</strong>. No hacemos series, hacemos piezas con carácter.</p>
-        <p>Trabajamos directamente con nuestros clientes para adaptar cada mueble a su espacio y estilo de vida. Porque no vendemos muebles: <strong>creamos objetos con historia</strong>.</p>
+        <p><strong>Industrial Mercedes</strong> nació de la pasión por el diseño funcional y la artesanía en metal y
+          madera.</p>
+        <p>En nuestro taller en <strong>Mercedes, Buenos Aires</strong>, combinamos técnicas tradicionales con un estilo
+          industrial robusto, creando muebles únicos, duraderos y hechos a medida.</p>
+        <p>Cada pieza es diseñada y fabricada con atención al detalle, utilizando materiales de primera calidad como
+          <strong>madera maciza, hierro negro y acero soldado</strong>. No hacemos series, hacemos piezas con carácter.
+        </p>
+        <p>Trabajamos directamente con nuestros clientes para adaptar cada mueble a su espacio y estilo de vida. Porque
+          no vendemos muebles: <strong>creamos objetos con historia</strong>.</p>
       </div>
     </div>
   </section>
@@ -112,31 +136,37 @@
       <div class="catalogo">
         <!-- Producto 1: Mesa de Comedor -->
         <div class="item">
-         <img src="/img/mesaComedor.jpeg" alt="Mesa de comedor industrial de hierro y madera maciza - Industrial Mercedes">
+          <img src="/img/mesa-comedor.webp"
+            alt="Mesa de comedor industrial de hierro y madera maciza - Industrial Mercedes">
           <div class="item-content">
             <h3>Mesa de Comedor</h3>
             <p>Diseño robusto en madera maciza y base de hierro. Medidas personalizables.</p>
-            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Mesa%20de%20Comedor" target="_blank" class="whatsapp small">Consultar Precio</a>
+            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Mesa%20de%20Comedor"
+              target="_blank" class="whatsapp small">Consultar Precio</a>
           </div>
         </div>
 
         <!-- Producto 2: Mesa de Centro -->
         <div class="item">
-          <img src="/img/mesaDeCentro.jpeg" alt="Mesa de Centro industrial de hierro y madera maciza - Industrial Mercedes" />
+          <img src="/img/mesa-de-centro.webp"
+            alt="Mesa de Centro industrial de hierro y madera maciza - Industrial Mercedes" />
           <div class="item-content">
             <h3>Mesa de Centro</h3>
             <p>Con ruedas industriales y estante inferior. Ideal para sala de estar.</p>
-            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Mesa%20de%20Centro" target="_blank" class="whatsapp small">Consultar Precio</a>
+            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Mesa%20de%20Centro"
+              target="_blank" class="whatsapp small">Consultar Precio</a>
           </div>
         </div>
 
         <!-- Producto 3: Estantería Modular -->
         <div class="item">
-          <img src="/img/estanteriaModular.jpeg" alt="Estantería industrial de hierro y madera maciza - Industrial Mercedes" />
+          <img src="/img/estanteria-modular.webp"
+            alt="Estantería industrial de hierro y madera maciza - Industrial Mercedes" />
           <div class="item-content">
             <h3>Estantería Modular</h3>
             <p>Combina perfiles de acero y estantes de madera para un estilo único.</p>
-            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Estantería%20Modular" target="_blank" class="whatsapp small">Consultar Precio</a>
+            <a href="https://wa.me/5492324618827?text=Quisiera%20consultar%20por%3A%20Estantería%20Modular"
+              target="_blank" class="whatsapp small">Consultar Precio</a>
           </div>
         </div>
       </div>
@@ -150,28 +180,31 @@
     <div class="carousel-container">
       <!-- Slide 1 -->
       <div class="carousel-slide active">
-        <img src="/img/mesaComedor.jpeg" alt="Mesa de Comedor Industrial">
+        <img src="/img/mesa-comedor.webp" alt="Mesa de Comedor Industrial">
         <div class="carousel-text">
           <h3>Mesa de Comedor en Acero y Roble</h3>
-          <p>Diseño robusto con base de hierro soldado y tablero de madera maciza. Ideal para espacios modernos e industriales. Medidas personalizables.</p>
+          <p>Diseño robusto con base de hierro soldado y tablero de madera maciza. Ideal para espacios modernos e
+            industriales. Medidas personalizables.</p>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-slide">
-        <img src="/img/mesaDeCentro.jpeg" alt="Mesa de Centro con Ruedas">
+        <img src="/img/mesa-de-centro.webp" alt="Mesa de Centro con Ruedas">
         <div class="carousel-text">
           <h3>Mesa de Centro Móvil</h3>
-          <p>Con ruedas industriales auténticas y estante inferior. Perfecta para living o estudio. Totalmente funcional y con estilo vintage.</p>
+          <p>Con ruedas industriales auténticas y estante inferior. Perfecta para living o estudio. Totalmente funcional
+            y con estilo vintage.</p>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-slide">
-        <img src="/img/estanteriaModular.jpeg" alt="Estantería Modular de Acero">
+        <img src="/img/estanteria-modular.webp" alt="Estantería Modular de Acero">
         <div class="carousel-text">
           <h3>Estantería Modular Personalizada</h3>
-          <p>Combinación de perfiles de acero y estantes de madera. Ideal para paredes vacías o espacios de trabajo. Diseño modular y adaptable.</p>
+          <p>Combinación de perfiles de acero y estantes de madera. Ideal para paredes vacías o espacios de trabajo.
+            Diseño modular y adaptable.</p>
         </div>
       </div>
 
@@ -196,7 +229,7 @@
     <p>Estamos en Mercedes, Buenos Aires. Escríbenos y te asesoramos sin compromiso.</p>
     <a class="whatsapp" href="https://wa.me/5492324618827" target="_blank">Escribinos por WhatsApp</a>
   </div>
-  
+
 
   <!-- ==========================================================================
        PIE DE PÁGINA
@@ -213,10 +246,14 @@
     <img id="lightbox-img" class="lightbox-img" src="" alt="Imagen ampliada">
     <div id="lightbox-caption" class="lightbox-caption"></div>
   </div>
-
+  <!--preloader-->
+  <div class="preloader">
+    <div class="loader-logo">Industrial Mercedes</div>
+  </div>
   <!-- ==========================================================================
        SCRIPTS
        ========================================================================== -->
   <script src="script.js"></script>
 </body>
+
 </html>
