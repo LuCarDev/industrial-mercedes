@@ -9,15 +9,40 @@
   <title>Contacto - Industrial Mercedes</title>
   <meta name="description" content="Contacta con Industrial Mercedes. Teléfono, WhatsApp, Email, Instagram, Facebook y formulario de contacto.">
   
-  <!-- Fuentes tipográficas de Google Fonts para un diseño elegante -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#25D366">
+
+  <!-- Fuentes tipográficas -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
   
+  <!-- Preconnect para optimizar carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <!-- Favicon (ícono de la pestaña del navegador) -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   
   <!-- Enlace a la hoja de estilos principal -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema Markup para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Industrial Mercedes",
+    "description": "Diseño y fabricación de muebles industriales en Mercedes, Buenos Aires",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mercedes",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "telephone": "+5492324618827",
+    "url": "https://industrial-mercedes.netlify.app"
+  }
+  </script>
 </head>
 
 <body>
@@ -97,18 +122,19 @@
           <!-- Instagram -->
           <div class="contacto-item">
             <h3>📸 Instagram</h3>
-            <p><a href="https://www.instagram.com/industrialmercedes/" target="_blank" class="contacto-link">@tuinstagram</a></p>
+            <p><a href="https://www.instagram.com/industrialmercedes/" target="_blank" class="contacto-link">@industrialmercedes</a></p>
           </div>
 
           <!-- Facebook -->
           <div class="contacto-item">
             <h3>📘 Facebook</h3>
-            <p><a href="https://www.facebook.com/industrial.mercedes/" target="_blank" class="contacto-link">/tufacebook</a></p>
-        </div>
-        <!-- Email -->
+            <p><a href="https://www.facebook.com/industrial.mercedes/" target="_blank" class="contacto-link">/industrial.mercedes</a></p>
+          </div>
+          
+          <!-- Email -->
           <div class="contacto-item">
             <h3>📧 Email</h3>
-            <p><a href="industrial.merce@gmail.com" class="contacto-link">info@industrialmercedes.com</a></p>
+            <p><a href="mailto:industrial.merce@gmail.com" class="contacto-link">industrial.merce@gmail.com</a></p>
           </div>
         </div>
 
@@ -118,44 +144,68 @@
         <div class="contacto-formulario">
           <h2>Envíanos un mensaje</h2>
           
-          <!-- 
-            Formulario configurado para Netlify Forms:
-            - name: Identifica el formulario en Netlify
-            - method="POST": Requerido por Netlify
-            - data-netlify="true": Habilita el procesamiento de Netlify
-            - El campo oculto 'form-name' es una buena práctica adicional
-          -->
           <form 
             id="formularioContacto" 
             name="contacto-industrial-mercedes" 
             method="POST" 
             data-netlify="true"
+            netlify-honeypot="bot-field"
+            novalidate
           >
-            <!-- Campo oculto para identificar el formulario (buena práctica) -->
+            <!-- Campo honeypot para spam - DEBE ESTAR AL PRINCIPIO -->
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            
+            <!-- Campo oculto para identificar el formulario -->
             <input type="hidden" name="form-name" value="contacto-industrial-mercedes" />
             
             <!-- Campo: Nombre completo -->
             <div class="form-group">
-              <label for="nombre">Nombre completo *</label>
-              <input type="text" id="nombre" name="nombre" required>
+              <label for="nombre">Nombre completo <span aria-label="requerido">*</span></label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                required
+                aria-required="true"
+                autocomplete="name"
+              >
             </div>
 
             <!-- Campo: Email -->
             <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required>
+              <label for="email">Email <span aria-label="requerido">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                aria-required="true"
+                autocomplete="email"
+              >
             </div>
 
             <!-- Campo: Teléfono -->
             <div class="form-group">
               <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" name="telefono">
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono"
+                autocomplete="tel"
+              >
             </div>
 
             <!-- Campo: Asunto -->
             <div class="form-group">
-              <label for="asunto">Asunto *</label>
-              <select id="asunto" name="asunto" required>
+              <label for="asunto">Asunto <span aria-label="requerido">*</span></label>
+              <select 
+                id="asunto" 
+                name="asunto" 
+                required
+                aria-required="true"
+              >
                 <option value="">Selecciona un asunto</option>
                 <option value="consulta_general">Consulta general</option>
                 <option value="presupuesto">Solicitar presupuesto</option>
@@ -166,8 +216,15 @@
 
             <!-- Campo: Mensaje -->
             <div class="form-group">
-              <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+              <label for="mensaje">Mensaje <span aria-label="requerido">*</span></label>
+              <textarea 
+                id="mensaje" 
+                name="mensaje" 
+                rows="5" 
+                required
+                aria-required="true"
+                placeholder="Cuéntanos qué necesitas..."
+              ></textarea>
             </div>
 
             <!-- Botón de envío con estilo de WhatsApp -->

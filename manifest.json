@@ -1,0 +1,16 @@
+{
+  "name": "Industrial Mercedes",
+  "short_name": "Industrial Mercedes",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e1e",
+  "theme_color": "#25D366",
+  "description": "Diseño y fabricación de muebles industriales en Mercedes, Buenos Aires",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}

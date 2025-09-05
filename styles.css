@@ -25,6 +25,12 @@ h2,
   font-family: 'Playfair Display', serif;
 }
 
+/* Agregar preload para fuentes críticas */
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
 /* ==========================================================================
    HEADER (Encabezado principal)
    ========================================================================== */
@@ -159,6 +165,49 @@ header p {
   color: white;
   text-align: center;
   padding: 60px 20px;
+}
+
+/* Estilos para los iconos de contacto directo */
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que se ajusten en pantallas pequeñas */
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: #f8f8f8; /* Fondo claro */
+  color: #333;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.contact-icon:hover {
+  background-color: #25D366; /* Verde WhatsApp al pasar el mouse */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+  .contact-methods {
+    gap: 12px;
+  }
+  
+  .contact-icon {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
 }
 
 /* ==========================================================================
@@ -985,34 +1034,34 @@ section,
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #444;
+  color: #333;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
-  transition: border-color 0.3s ease;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  outline: none;
   border-color: #25D366;
-  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.2);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
 }
 
 .form-group textarea {
@@ -1024,3 +1073,301 @@ section,
    FIN PÁGINA DE CONTACTO
    ========================================================================== */
    
+   /* ==========================================================================
+   EFECTOS VISUALES ADICIONALES
+   ========================================================================== */
+
+.nav-logo.active {
+  color: #25D366;
+  transition: color 0.3s ease;
+}
+
+.nav-logo.pulsing {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/* ==========================================================================
+   ACCESIBILIDAD
+   ========================================================================== */
+
+/* Focus visible para navegación por teclado */
+.nav-link:focus,
+.whatsapp:focus {
+  outline: 2px solid #25D366;
+  outline-offset: 2px;
+}
+
+/* Reducir movimiento para usuarios con preferencias */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   SECCIÓN DE GARANTÍA
+   ========================================================================== */
+
+.warranty {
+  background: linear-gradient(135deg, #2c3e50 0%, #1e1e1e 100%);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 40px 0;
+}
+
+.warranty h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #25D366;
+}
+
+.warranty p {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .warranty {
+    padding: 30px 15px;
+  }
+  
+  .warranty h3 {
+    font-size: 1.5em;
+  }
+  
+  .warranty p {
+    font-size: 1em;
+  }
+}
+
+/* Efecto parallax sutil para sección "Sobre Nosotros" */
+.about {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Botones CTA más prominentes */
+.primary-cta {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.primary-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.primary-cta:active {
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   ESTILOS PARA IMPRESIÓN
+   ========================================================================== */
+@media print {
+  /* Ocultar elementos innecesarios en impresión */
+  .navbar, 
+  .back-to-top, 
+  .nav-toggle,
+  .whatsapp:not(.whatsapp-print),
+  .social-link,
+  .carousel-btn,
+  .dot,
+  .contact-methods {
+    display: none !important;
+  }
+  
+  /* Ajustar estilos para impresión */
+  body {
+    font-size: 12pt;
+    color: black;
+    background: white;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  header {
+    background: none;
+    color: black;
+  }
+  
+  .about {
+    background: none;
+    border: 1px solid #ccc;
+  }
+  
+  .item {
+    break-inside: avoid;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .whatsapp-print {
+    background: none;
+    border: 1px solid #25D366;
+    color: #25D366;
+  }
+  
+  footer {
+    border-top: 1px solid #ccc;
+    color: #666;
+  }
+}
+
+/* ==========================================================================
+   MEJORAS DE ACCESIBILIDAD
+   ========================================================================== */
+
+/* Focus visible para navegación por teclado */
+.nav-link:focus,
+.whatsapp:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.carousel-btn:focus,
+.dot:focus {
+  outline: 2px solid #25D366;
+  outline-offset: 2px;
+}
+
+/* Reducir movimiento para usuarios con preferencias */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .spinner,
+  .preloader {
+    animation: none;
+  }
+}
+
+/* Mejorar contraste para usuarios con daltonismo */
+@media (prefers-contrast: high) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.98) !important;
+  }
+  
+  .whatsapp {
+    background: #128C7E;
+  }
+  
+  .badge {
+    border: 2px solid #fff;
+  }
+}
+
+/* Tamaño de fuente para usuarios con dificultades visuales */
+@media (prefers-font-size: large) {
+  body {
+    font-size: 1.2em;
+  }
+  
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 1.5em; }
+}
+/* ==========================================================================
+   MEJORAS EN FORMULARIO DE CONTACTO
+   ========================================================================== */
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #25D366;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+  background-color: #fff;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #e74c3c;
+}
+
+.form-group .error-message {
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown) + .error-message {
+  display: block;
+}
+
+/* Campo honeypot oculto */
+.hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+/* Botón de submit mejorado */
+.contacto-formulario button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive para formulario */
+@media (max-width: 768px) {
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.625rem;
+    font-size: 1rem;
+  }
+}

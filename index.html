@@ -10,6 +10,8 @@
   <meta name="keywords" content="muebles industriales, mesa de comedor hierro, estantería modular, diseño argentino, muebles a medida, Mercedes Buenos Aires, muebles de metal y madera">
   <meta name="author" content="Industrial Mercedes">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#25D366">
+  <link rel="canonical" href="https://industrial-mercedes.netlify.app/">
 
   <!-- Open Graph para redes sociales -->
   <meta property="og:title" content="Industrial Mercedes - Muebles de Diseño en Buenos Aires">
@@ -24,8 +26,15 @@
   <meta name="twitter:description" content="Muebles industriales artesanales hechos a medida en Argentina.">
   <meta name="twitter:image" content="/img/destacado.jpg">
 
+  <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#25D366">
+
   <!-- Fuentes tipográficas -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Preconnect para optimizar carga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -33,6 +42,24 @@
 
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Schema Markup para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Industrial Mercedes",
+    "description": "Diseño y fabricación de muebles industriales en Mercedes, Buenos Aires",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mercedes",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "telephone": "+5492324618827",
+    "url": "https://industrial-mercedes.netlify.app"
+  }
+  </script>
 </head>
 
 <body>
@@ -125,7 +152,11 @@
       <div class="catalogo">
         <!-- Producto 1 -->
         <div class="item">
-          <img src="/img/mesa-comedor.webp" alt="Mesa de comedor industrial de hierro y madera maciza - Industrial Mercedes">
+          <img src="/img/mesa-comedor.webp" 
+               alt="Mesa de comedor industrial de hierro y madera maciza - Industrial Mercedes"
+               loading="lazy"
+               width="400"
+               height="250">
           <div class="item-content">
             <h3>Mesa de Comedor</h3>
             <p>Diseño robusto en madera maciza y base de hierro. Medidas personalizables.</p>
@@ -135,7 +166,11 @@
 
         <!-- Producto 2 -->
         <div class="item">
-          <img src="/img/mesa-de-centro.webp" alt="Mesa de Centro industrial de hierro y madera maciza - Industrial Mercedes" />
+          <img src="/img/mesa-de-centro.webp" 
+               alt="Mesa de Centro industrial de hierro y madera maciza - Industrial Mercedes"
+               loading="lazy"
+               width="400"
+               height="250">
           <div class="item-content">
             <h3>Mesa de Centro</h3>
             <p>Con ruedas industriales y estante inferior. Ideal para sala de estar.</p>
@@ -145,7 +180,11 @@
 
         <!-- Producto 3 -->
         <div class="item">
-          <img src="/img/estanteria-modular.webp" alt="Estantería industrial de hierro y madera maciza - Industrial Mercedes" />
+          <img src="/img/estanteria-modular.webp" 
+               alt="Estantería industrial de hierro y madera maciza - Industrial Mercedes"
+               loading="lazy"
+               width="400"
+               height="250">
           <div class="item-content">
             <h3>Estantería Modular</h3>
             <p>Combina perfiles de acero y estantes de madera para un estilo único.</p>
@@ -194,12 +233,29 @@
     </div>
   </section>
 
+  <!-- Garantía de calidad -->
+  <section class="warranty">
+    <div class="container">
+      <h3>Garantía de calidad</h3>
+      <p>Todos nuestros muebles incluyen garantía de 2 años y servicio postventa.</p>
+    </div>
+  </section>
+
   <!-- Sección de contacto -->
-<div class="contacto" id="contacto">
-  <h2>¿Listo para tu mueble ideal?</h2>
-  <p>Estamos en Mercedes, Buenos Aires. Escríbenos y te asesoramos sin compromiso.</p>
-  <a class="whatsapp" href="contacto.html">Todas nuestras formas de contacto</a>
-</div>
+  <div class="contacto" id="contacto">
+    <h2>¿Listo para tu mueble ideal?</h2>
+    <p>Estamos en Mercedes, Buenos Aires. Escríbenos y te asesoramos sin compromiso.</p>
+    <a class="whatsapp" href="contacto.html">Todas nuestras formas de contacto</a>
+    <!-- Opciones de contacto directo -->
+    <div class="contact-methods">
+      <a href="https://wa.me/5492324618827" class="contact-icon" target="_blank">
+        <span>📱 WhatsApp</span>
+      </a>
+      <a href="https://www.instagram.com/industrialmercedes/" class="contact-icon" target="_blank">
+        <span>📸 Instagram</span>
+      </a>
+    </div>
+  </div>
 
   <!-- Pie de página -->
   <footer>
