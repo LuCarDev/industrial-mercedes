@@ -11,6 +11,11 @@
       "src": "/favicon.ico",
       "sizes": "32x32",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/img/destacado.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
     }
   ]
 }

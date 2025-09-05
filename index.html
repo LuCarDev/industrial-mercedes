@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
 
   <!-- Título y metadatos SEO -->
   <title>Industrial Mercedes - Muebles de Diseño</title>
@@ -43,6 +44,21 @@
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="styles.css" />
   
+  <script>
+  // Verificar si el navegador soporta Service Workers
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registrado con éxito:', registration.scope);
+        })
+        .catch((error) => {
+          console.log('Error al registrar el Service Worker:', error);
+        });
+    });
+  }
+</script>
+
   <!-- Schema Markup para SEO -->
   <script type="application/ld+json">
   {
